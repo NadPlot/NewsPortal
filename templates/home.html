@@ -4,13 +4,24 @@
 {% block title %}News Portal{% endblock title %}
 
 {% block content %}
-  <h1>Homepage</h1>
-  {% if user.is_authenticated %}
-    Добро пожаловать на News Portal, {{ user.username }}!
-    <p><a href="{% url 'logout' %}">Выйти<a/></p>
-  {% else %}
-    <p>Вы не авторизованы</p>
-    <a href="{% url 'login' %}">Войти</a>
-    <a href="{% url 'signup' %}">Регистрация</a>
-  {% endif %}
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-7">
+    <!-- Post preview-->
+      <div class="post-preview">
+        <h2 class="post-title">Учебный проект курса python-разработчик</h2>
+
+        {% if user.is_authenticated %}
+          Добро пожаловать на News Portal, {{ user.username }}!
+          <p><a href="{% url 'logout' %}">Выйти<a/></p>
+        {% else %}
+        <p>Вы не авторизованы</p>
+        <a href="{% url 'login' %}">Войти</a>
+        <a href="{% url 'signup' %}">Регистрация</a>
+        {% endif %}
+
+       </div>
+     </div>
+  </div>
+</div>
 {% endblock content %}
