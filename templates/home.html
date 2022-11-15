@@ -13,11 +13,8 @@
 
         {% if user.is_authenticated %}
           Добро пожаловать на News Portal, {{ user.username }}!
-          <p><a href="{% url 'logout' %}">Выйти<a/></p>
         {% else %}
         <p>Вы не авторизованы</p>
-        <a href="{% url 'login' %}">Войти</a>
-        <a href="{% url 'signup' %}">Регистрация</a>
         {% endif %}
 
        </div>
