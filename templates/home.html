@@ -3,24 +3,17 @@
 
 {% block title %}News Portal{% endblock title %}
 
-{% block header1 %}
+{% block header1 %}News Portal{% endblock header1 %}
 
-News Portal
-{% endblock header1 %}
+{% block header2 %}Study project{% endblock header2 %}
 
-{% block content %}    
-<!-- Post preview-->
-      <div class="post-preview">
-        <h2 class="post-title">Учебный проект курса python-разработчик</h2>
+{% block content %}
+    
+<h2>Учебный проект курса python-разработчик</h2>
+{% if user.is_authenticated %}
+    Добро пожаловать на News Portal, {{ user.username }}!
+{% else %}
+    <p>Вы не авторизованы</p>
+{% endif %}
 
-        {% if user.is_authenticated %}
-          Добро пожаловать на News Portal, {{ user.username }}!
-        {% else %}
-        <p>Вы не авторизованы</p>
-        {% endif %}
-
-       </div>
-     </div>
-  </div>
-</div>
 {% endblock content %}

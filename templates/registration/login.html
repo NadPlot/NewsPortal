@@ -3,8 +3,10 @@
 
 {% block title %}Log In{% endblock title %}
 
+{% block header1 %}News Portal{% endblock header1 %}
+
+
 {% block content %}
-  <h2>Войти на News Portal</h2>
   <form method="post">
     {% csrf_token %}
     {{ form|crispy }}

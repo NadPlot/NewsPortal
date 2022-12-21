@@ -3,8 +3,9 @@
 
 {% block title %}Регистрация{% endblock title %}
 
+{% block header1 %}Регистрация{% endblock header1 %}
+
 {% block content %}
-  <h2>Регистрация на News Portal</h2>
   <form method="post">
     {% csrf_token %}
     {{ form|crispy }}
